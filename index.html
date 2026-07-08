@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社健匠不動産｜小平市の不動産・新築戸建て</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:ital,wght@0,500;0,600;0,700;1,500&family=Klee+One:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><img src="./assets/logo.png" alt="株式会社健匠不動産"></a>
+    <div class="nav-links">
+      <a href="tel:0423135916" class="nav-tel">042-313-5916<small>10:00–18:00／水曜定休</small></a>
+      <a href="#gift" class="btn-line"><img src="./assets/sns_line.png" alt="line">LINE登録で物件を受け取る</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow hero-eyebrow" style="color:var(--blue)">ー　家族の未来を、一緒に選ぶ　ー</span>
+      <h1>良い点も注意点も、<br><span class="hl">正直に</span>お伝えする<br>小平の家さがし。</h1>
+      <div class="hero-text-sec reveal in">
+        <div class="hero-text-inner">
+          <p class="lead">新築戸建て・中古・土地の最新物件と、ここでしか見られない<strong>未公開物件</strong>を。<br>まずはLINEから、気軽に。</p>
+          <div class="trust-chips">
+            <div class="trust-chip trust-chip-1"><b><span class="star">★</span>5.0<small>/38件</small></b>Googleクチコミ</div>
+            <div class="trust-chip trust-chip-2"><b>8<small>市対応</small></b>小平+近隣7市</div>
+            <div class="trust-chip trust-chip-3"><b>無料</b>住宅ローン・FP相談</div>
+            <div class="trust-chip trust-chip-4"><b>未公開物件<small>あり</small></b>総数1000件以上</div>
+          </div>
+        </div>
+        <div class="hero-img-inner sp-only">
+          <img id="heroCeoImg" src="./assets/ceo.png" alt="株式会社健匠不動産 代表取締役 穂本健太郎">
+        </div>
+      </div>
+
+      <a href="#gift" class="hero-cta-btn line-cta-js"><img src="./assets/sns_line.png" alt="line"><span>LINE登録で物件を受け取る</span><span class="arrow">›</span></a>
+      <div class="hero-cta-sub">
+        友だち追加だけでOK／所要1分／いつでも退会できます
+      </div>
+    </div>
+    <div class="hero-photo pc-only">
+      <img id="heroCeoImg" src="./assets/ceo.png" alt="株式会社健匠不動産 代表取締役 穂本健太郎">
+      <div class="hero-photo-cap"><span class="role">代表取締役</span><span class="nm">穂本 健太郎</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section id="properties" class="lightsec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Properties</span>
+      <h2>物件紹介</h2>
+      <p class="ja-sub">公開物件はどなたでも閲覧できます。<strong>未公開（会員限定）物件</strong>はLINE登録後に解錠してご覧いただけます。</p>
+    </div>
+    <div class="prop-stats reveal">
+      <div class="pstat">
+        <span class="ps-ico">🏠</span>
+        <div class="ps-body"><span class="ps-num" id="cntPublic">0</span><span class="ps-unit">件</span><span class="ps-label">どなたでも見られる<br>公開物件</span></div>
+      </div>
+      <div class="pstat locked-stat">
+        <span class="ps-ico">🔒</span>
+        <div class="ps-body"><span class="ps-num" id="cntMember">0</span><span class="ps-unit">件</span><span class="ps-label">サイトには載せていない<br>未公開（会員限定）物件</span></div>
+      </div>
+      <div class="pstat total-stat">
+        <span class="ps-ico">＋</span>
+        <div class="ps-body"><span class="ps-num" id="cntTotal">0</span><span class="ps-unit">件</span><span class="ps-label">LINE登録で見られる<br>物件総数</span></div>
+      </div>
+    </div>
+
+    <div class="member-promo reveal">
+      <div class="mp-left">
+        <span class="mp-badge">🔒 LINE登録 会員限定</span>
+        <h3>いい物件ほど、<br class="mp-br">表に出る前に決まります。</h3>
+        <p>人気エリア・好条件の物件は、サイトやポータルに載る前に成約することも少なくありません。だからこそ健匠不動産では、<strong>サイト未掲載の「未公開物件」を、LINE会員の方だけ</strong>にいち早くご案内しています。</p>
+        <p class="mp-now">いまこの瞬間、<b id="mpCount">0</b> 件の未公開物件を会員様に公開中。</p>
+      </div>
+      <div class="mp-right">
+        <a href="#" id="lineLink2" class="mp-cta"><span><small>＼ 登録1分・無料 ／</small>未公開物件を見る</span><span class="play">▶</span></a>
+        <span class="mp-sub">登録後すぐ、ロック中の物件が解錠されます</span>
+      </div>
+    </div>
+    <div class="sim-bar reveal">
+      <div class="sim-head"><span class="badge">SIMULATION</span>毎月の支払い額をその場で試算</div>
+      <p class="sim-desc">ご年齢と頭金を入力すると、各物件の月々の返済目安が表示されます。</p>
+      <div class="sim-inputs">
+        <div class="sim-field">
+          <label>ご年齢</label>
+          <div class="inwrap"><input type="number" id="simAge" value="40" min="18" max="78" inputmode="numeric"><span class="suffix">歳</span></div>
+        </div>
+        <div class="sim-field sim-field-slider">
+          <label>頭金 <span class="sim-val" id="simDownVal">0</span> 万円</label>
+          <input type="range" id="simDown" value="0" min="0" max="2000" step="50" class="sim-slider">
+          <div class="sim-ticks"><span>0</span><span>500</span><span>1,000</span><span>1,500</span><span>2,000万</span></div>
+        </div>
+        <button class="sim-reset" id="simReset">条件をリセット</button>
+        <a href="#" class="sim-book line-cta-js">💬 LINEで相談する</a>
+      </div>
+      <p class="sim-note">※ 借入年数＝79−ご年齢（最大50年）／ 借入額＝物件価格×1.1（諸費用10%）−頭金／ 金利1.2%・元利均等で試算した概算です。実際の借入可能額・適用金利・諸費用は物件や金融機関により異なります。<strong>詳しくは無料の資金相談会で。</strong></p>
+    </div>
+    <div class="prop-bar reveal">
+      <div class="filters">
+        <button class="active" data-f="all">すべて</button>
+        <button data-f="public">公開</button>
+        <button data-f="member">未公開（会員限定）</button>
+      </div>
+      <div class="member-toggle"><span>会員モードを体験</span><div class="switch" id="memberSwitch"></div></div>
+    </div>
+    <div class="grid" id="propGrid"></div>
+  </div>
+</section>
+
+<!-- LINE GIFT BANNER -->
+<section class="gift" id="gift">
+  <div class="arrow"></div>
+  <div class="wrap">
+    <div class="gift-top">
+      <div class="reveal">
+        <span class="gift-badge">LINE登録でプレゼント！</span>
+        <h2><span class="ice">「なんとなく」</span>で家を買って、<br><span class="box">後悔<span class="lm">したくない</span>。</span></h2>
+        <p class="sub">後悔しない家さがしの<strong>"順番"と"考え方"</strong>を、無料でお渡しします。</p>
+      </div>
+      <div class="reveal">
+        <div class="booklets">
+          <div class="booklet b1"><span class="bk-tag">GUIDE 01</span><div class="bk-title">不動産購入ロードマップ</div><div class="bk-foot">KENSHO ESTATE</div></div>
+          <div class="booklet b3"><span class="bk-tag">GUIDE 03</span><div class="bk-title">あなたはどっち派？よくある二択</div><div class="bk-foot">KENSHO ESTATE</div></div>
+          <div class="booklet b2"><span class="bk-tag">GUIDE 02</span><div class="bk-title">無理のない住宅購入予算の決め方</div><div class="bk-foot">KENSHO ESTATE</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gift-cta-wrap reveal">
+      <a href="#" id="lineLink" class="gift-cta">
+        <span><small>＼ 友だち追加は1分・無料 ／</small>4つの特典を受け取る</span>
+        <span class="play">▶</span>
+      </a>
+      <p class="gift-note">※ LINE公式アカウントの友だち追加ページに移動します（要URL設定）</p>
+    </div>
+
+    <div class="gift-cards">
+      <div class="gc reveal"><span class="pill">無料</span><div class="num">01</div><h3>不動産購入ロードマップ</h3><p>予算決め〜引き渡しまで、いつ・何を・どの順番で進めるかが分かる11ステップの設計図。</p></div>
+      <div class="gc reveal"><span class="pill">無料</span><div class="num">02</div><h3>無理のない住宅購入予算の決め方</h3><p>金利上昇局面でも「いくらなら安心して返せるか」。審査金利や諸費用まで踏まえた予算の考え方。</p></div>
+      <div class="gc reveal"><span class="pill">無料</span><div class="num">03</div><h3>あなたはどっち派？よくある二択</h3><p>賃貸か持ち家か、新築か中古か。迷いがちな11の二択を、メリット・注意点で整理。</p></div>
+      <div class="gc reveal"><span class="pill">会員限定</span><div class="num">04</div><h3>未公開物件の閲覧＋FP相談</h3><p>サイト未掲載の物件をLINEでご案内。FPによる無料オンライン資金相談も予約できます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MESSAGE / CEO -->
+<section class="message" id="message">
+  <div class="sec-head">
+    <span class="eyebrow">Message</span>
+    <h2>メッセージ</h2>
+  </div>
+  <div class="wrap msg-grid">
+    <div class="msg-photo reveal">
+      <div class="ph"><img src="./assets/staff_01.jpeg" alt="穂本 健太郎"></div>
+      <div class="cap">株式会社健匠不動産 代表取締役<b>穂本 健太郎</b></div>
+    </div>
+    <div class="msg-body reveal">
+      <h2>「実家で育った安心感を、次の家にも。」</h2>
+      <p>私の実家は、うどん屋を営む古くて狭い賃貸でした。それでも、かけがえのない思い出が詰まった場所です。家の広さや価格ではなく、そこに流れた時間こそが「実家」をつくるのだと思っています。</p>
+      <p>だからこそ私たちは、良いことばかりを並べる不動産会社ではありません。注意点や将来のリスクも正直にお伝えし、「買わない方がいい」と判断すればそうお伝えすることもあります。</p>
+      <p>最終的に決めるのは、ご両親でも営業マンでもネットの声でもなく、あなた自身です。自信を持って決断できるように、正しい情報と誠実な選択肢を、最後まで本気でお届けします。</p>
+      <div class="sign">株式会社健匠不動産　代表取締役<br><span class="sign-name"><img src="./assets/sign.png" alt="穂本 健太郎"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- THINK / PHILOSOPHY -->
+<section class="think">
+  <div class="wrap think-grid">
+    <div class="reveal">
+      <span class="eyebrow">Our Philosophy</span>
+      <h2>“物件”よりも、<br>“考え方”をお渡しします。</h2>
+      <p class="lead">マイホーム選びは、家族の未来につながる大切なことです。</p>
+      <div class="think-divider"><span>だからこそ私たちは、</span></div>
+      <ul>
+        <li>その物件の良い点だけではなく、リスクとコストも正直にお伝えします。</li>
+        <li>「賃貸のままでいいのか、買うべきか」から一緒に考えます。</li>
+        <li>最終的に決めるのは、いつもお客様自身。私たちは判断材料を揃える役です。</li>
+      </ul>
+    </div>
+    <div class="think-photo reveal">
+      <span class="ph-ico">📷</span>
+      <div class="ph-label">ご家族の相談シーン<br><small>（実写画像に差し替え予定）</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- LINE BAND 1 -->
+<section class="line-band reveal">
+  <div class="wrap">
+    <span class="lb-badge">🔒 LINE会員限定</span>
+    <h2>サイトに載らない物件を、<br>いちばん早く受け取りませんか?</h2>
+    <p>未公開物件のご案内と、家さがしに役立つ4つの特典を無料でお届けします。</p>
+    <a href="#" class="lb-btn line-cta-js"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.06 3.55 7.46 8.35 8.1.32.07.77.21.88.49.1.25.07.65.03.9l-.14.85c-.04.25-.2.99.87.54 1.07-.45 5.76-3.39 7.86-5.81C21.36 13.6 22 11.99 22 10.23 22 5.69 17.52 2 12 2z"/></svg>LINEで友だち追加する</a>
+    <span class="lb-sub">登録1分・無料 ／ しつこい連絡はしません</span>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section id="staff" class="lightsec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Staff</span>
+      <h2>スタッフ紹介</h2>
+      <p class="ja-sub">家さがしに伴走する、健匠不動産のメンバーです。</p>
+    </div>
+    <div class="staff-grid">
+      <div class="staff reveal in">
+        <div class="pic"><img src="./assets/staff_01.jpeg" alt="穂本健太郎"></div>
+        <div class="info"><span class="role">CEO</span>
+          <h3>穂本 健太郎</h3>
+          <p>代表取締役。「正直な家さがし」を掲げ、お客様の納得を第一に伴走します。</p>
+        </div>
+      </div>
+      <div class="staff reveal in">
+        <div class="pic"><img src="./assets/staff_02.jpeg" alt="山口賢大"></div>
+        <div class="info"><span class="role">Manager</span>
+          <h3>山口 賢大</h3>
+          <p>部長。豊富な経験で、物件選びから資金計画まで的確にサポートします。</p>
+        </div>
+      </div>
+      <div class="staff reveal in">
+        <div class="pic"><img src="./assets/staff_03.jpeg" alt="木村翔"></div>
+        <div class="info"><span class="role">Chief</span>
+          <h3>木村 翔</h3>
+          <p>主任。お客様一人ひとりの希望に寄り添い、丁寧にご提案します。</p>
+        </div>
+      </div>
+      <div class="staff reveal in">
+        <div class="pic"><img src="./assets/staff_04.jpeg" alt="吉岡直輝"></div>
+        <div class="info"><span class="role">Sales</span>
+          <h3>吉岡 直輝</h3>
+          <p>営業担当。物件のご紹介から内見まで、フットワーク軽く対応します。</p>
+        </div>
+      </div>
+      <div class="staff reveal in">
+        <div class="pic"><img src="./assets/staff_05.jpeg" alt="山下莞奈"></div>
+        <div class="info"><span class="role">Sales</span>
+          <h3>山下 莞奈</h3>
+          <p>営業担当。はじめての家さがしも、安心していただけるようお手伝いします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Our Promise</span><h2>健匠不動産の約束</h2></div>
+    <div class="promise-grid">
+      <div class="pr reveal"><div class="ic">🤝</div><h3>正直な情報開示</h3><p>良い点も注意点も、メリット・デメリットを包み隠さずお伝えします。</p></div>
+      <div class="pr reveal"><div class="ic">🧮</div><h3>FPによる資金計画</h3><p>無理のない予算設計から、住宅ローンのご相談まで。</p></div>
+      <div class="pr reveal"><div class="ic">🚫</div><h3>押し売りゼロ</h3><p>急かしません。検討段階のご相談こそ歓迎します。</p></div>
+      <div class="pr reveal"><div class="ic">🏠</div><h3>引き渡し後も伴走</h3><p>登記・保険・入居前工事まで、最後まで安心をサポート。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FP -->
+<section id="fp" class="fp-sec">
+  <div class="wrap fp-grid">
+    <div class="fp-info reveal">
+      <span class="eyebrow">Free Consultation</span>
+      <h2>FPによる<br>オンライン資金相談会</h2>
+      <p>住宅購入の予算、住宅ローン、補助金。ファイナンシャルプランナーに、自宅からオンラインで無料相談できます。</p>
+      <div class="fp-points">
+        <div><span class="dot">★</span><span>「いくらまでなら無理なく買えるか」が分かる</span></div>
+        <div><span class="dot">★</span><span>住宅ローン・金利・補助金をまとめて整理</span></div>
+        <div><span class="dot">★</span><span>購入を決めていなくてもOK・しつこい営業なし</span></div>
+      </div>
+      <a href="#" class="fp-cta line-cta-js"><img src="./assets/sns_line.png" alt="line">LINEから予約する</a>
+      <span class="fp-cta-sub">無料・所要30分程度／オンラインで完結</span>
+    </div>
+    <div class="fp-visual reveal">
+      <svg viewBox="0 0 440 300" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="10" width="400" height="238" rx="16" fill="#ffffff" stroke="#1b3a8f" stroke-width="3"/>
+        <rect x="38" y="28" width="364" height="150" rx="8" fill="#eef2fb"/>
+        <rect x="50" y="38" width="200" height="130" rx="8" fill="#dbe8fb"/>
+        <circle cx="150" cy="85" r="28" fill="#7d9be0"/>
+        <rect x="108" y="122" width="84" height="28" rx="14" fill="#2b54c6"/>
+        <text x="150" y="141" font-family="Zen Kaku Gothic New, sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">FP 相談員</text>
+        <rect x="262" y="38" width="140" height="58" rx="6" fill="#fff"/>
+        <circle cx="332" cy="60" r="13" fill="#a9c1ef"/>
+        <rect x="278" y="78" width="108" height="10" rx="5" fill="#eef2fb"/>
+        <rect x="262" y="108" width="140" height="58" rx="6" fill="#fff"/>
+        <circle cx="332" cy="130" r="13" fill="#a9c1ef"/>
+        <rect x="278" y="148" width="108" height="10" rx="5" fill="#eef2fb"/>
+        <rect x="38" y="188" width="364" height="34" rx="17" fill="#1b3a8f"/>
+        <circle cx="200" cy="205" r="9" fill="#fff"/>
+        <circle cx="230" cy="205" r="9" fill="#fff"/>
+        <circle cx="260" cy="205" r="9" fill="#06c755"/>
+        <path d="M10 250 L430 250 L408 272 L32 272 Z" fill="#1b3a8f"/>
+        <circle cx="52" cy="46" r="22" fill="#c7f23f"/>
+        <text x="52" y="53" font-family="Zen Kaku Gothic New, sans-serif" font-size="20" font-weight="900" fill="#15356a" text-anchor="middle">¥</text>
+        <g transform="translate(370,190)">
+          <rect x="0" y="18" width="9" height="22" fill="#2b54c6"/>
+          <rect x="13" y="8" width="9" height="32" fill="#2b54c6"/>
+          <rect x="26" y="-2" width="9" height="42" fill="#3a66de"/>
+        </g>
+      </svg>
+      <p class="fp-visual-cap">オンライン面談のイメージ／実際の相談はビデオ通話またはお電話で行います</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES (Facilo / dandori) -->
+<section class="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Online Services</span>
+      <h2>オンラインで、もっと便利に</h2>
+      <p class="ja-sub">来店しなくても、家さがしから事前審査まで。スマホひとつで進められます。</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <h3>あなただけの家さがしマイページ</h3>
+        <p>ご希望に合わせて選んだ物件を、あなた専用のページにまとめてご案内。写真や地図で比較でき、気になる点はそのままチャットで相談できます。家族とも共有OK。</p>
+        <ul class="svc-list"><li>提案物件をまとめて閲覧・比較</li><li>担当者とチャットで気軽に相談</li><li>内見予約もそのまま</li></ul>
+        <a href="#" data-link="mypage" target="_blank" rel="noopener" class="svc-btn">マイページを発行する</a>
+        <span class="svc-note">※ Facilo を利用。発行をご希望の方は担当またはLINEまで。</span>
+      </div>
+      <div class="svc reveal accent">
+        <h3>「借りられるか」をオンラインで事前審査</h3>
+        <p>「自分はいくらまで借りられる？」を、来店せずにオンラインで確認。住宅ローンの専門チームが、複数の金融機関からあなたに合った提案をサポートします。</p>
+        <ul class="svc-list"><li>来店不要・スマホで完結</li><li>複数の金融機関を比較提案</li><li>専門家がスケジュールまで伴走</li></ul>
+        <a href="#" data-link="prescreen" target="_blank" rel="noopener" class="svc-btn alt">オンライン事前審査する</a>
+        <span class="svc-note">※ いえーる ダンドリ を利用。審査結果は購入を約束するものではありません。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Voice</span>
+      <h2>お客様の声</h2>
+      <div class="rv-summary">
+        <span class="rv-stars">★★★★★</span>
+        <b id="rvAvg">5.0</b>
+        <span class="rv-count">Googleクチコミ <b id="rvCount">20</b>件</span>
+      </div>
+      <p class="ja-sub">実際にご購入いただいたお客様から、Googleにお寄せいただいた声です。</p>
+    </div>
+    <div class="rv-track-wrap reveal">
+      <button class="rv-arrow prev" id="rvPrev" aria-label="前へ">‹</button>
+      <div class="rv-grid" id="rvGrid"></div>
+      <button class="rv-arrow next" id="rvNext" aria-label="次へ">›</button>
+    </div>
+    <div class="rv-more-wrap">
+      <a href="https://share.google/FZPe4m7bQtiNpJNZm" target="_blank" class="rv-more">Googleで全ての口コミを見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LINE BAND 2 -->
+<section class="line-band alt reveal">
+  <div class="wrap">
+    <span class="lb-badge">💬 まずは気軽に</span>
+    <h2>「買うかどうか」から、ご相談ください。</h2>
+    <p>検討段階のご相談も大歓迎です。LINEなら、すきま時間にメッセージひとつでやり取りできます。</p>
+    <a href="#" class="lb-btn line-cta-js"><img src="./assets/sns_line.png" alt="line">LINEで相談してみる</a>
+    <span class="lb-sub">小平市・近隣エリアの家さがしはお任せください</span>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social" class="social-sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Find Us</span><h2>SNSでも発信中</h2><p class="ja-sub">家さがしのヒントや最新情報を各SNSで発信しています。</p></div>
+    <div class="yt-grid reveal">
+      <div class="yt-frame"><iframe width="560" height="315" src="https://www.youtube.com/embed/ivBEzDix2qg?si=G1ir9blpCdfMWqKZ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <div class="yt-frame"><iframe src="https://www.youtube.com/embed/oXtJyu_-OCM" title="健匠不動産 YouTube動画" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </div>
+    <div class="social-grid reveal">
+      <a href="https://youtube.com/@kensho-estate" target="_blank"><img src="./assets/sns_youtube.png" alt="youtube"></a>
+      <a href="https://www.instagram.com/kensho.estate" target="_blank"><img src="./assets/sns_instagram.png" alt="instagram"></a>
+      <a href="https://share.google/FZPe4m7bQtiNpJNZm" target="_blank"><img src="./assets/sns_google.png" alt="google"></a>
+      <a href="https://x.com/kenshohudosan" target="_blank"><img src="./assets/sns_x.png" alt="x"></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">FAQ</span><h2>よくあるご質問</h2><p class="ja-sub">ご登録前の、よくあるご質問</p></div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>LINE登録したら、営業電話がたくさん来ませんか？</summary>
+        <div class="faq-a">いいえ、しつこい営業電話は一切いたしません。やり取りはすべてLINE上で完結します。ブロック・退会もいつでも可能です。</div>
+      </details>
+      <details class="faq-item">
+        <summary>まだ買うか決めていない段階でも、登録していいですか？</summary>
+        <div class="faq-a">むしろ、その段階の方がほとんどです。「相場だけ知りたい」「学区内にどんな物件があるか見たい」という方こそ、気軽にご登録ください。</div>
+      </details>
+      <details class="faq-item">
+        <summary>料金はかかりますか？</summary>
+        <div class="faq-a">LINE登録・物件情報の配信・ご相談はすべて無料です。仲介手数料は、ご成約時に宅地建物取引業法で定められた上限額（売買価格の3%＋6万円＋税。売買価格400万円超の場合の速算式）以内で、事前に明示してご請求します。</div>
+      </details>
+      <details class="faq-item">
+        <summary>小さな子どもを連れて事務所に行ってもいいですか？</summary>
+        <div class="faq-a">はい、ぜひお越しください。キッズスペース・授乳スペース・オムツ替え台をご用意しています。コインパーキング代も当社で負担いたします。</div>
+      </details>
+      <details class="faq-item">
+        <summary>登録の解除はできますか？</summary>
+        <div class="faq-a">いつでも可能です。LINEのブロックまたは退会で、配信は即時停止します。手続きや引き止めの連絡は一切ありません。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="finalcta" class="final-cta">
+  <div class="wrap">
+    <h2>まずはLINEで、<br class="sp-only">小平周辺の<span class="hl-gold">物件情報を</span><br><span class="hl-gold">無料</span>で受け取りませんか？</h2>
+    <p>LINEでもお電話でも、お気軽にどうぞ。<br>物件を見るだけ・相談だけでも大歓迎です。</p>
+    <div class="final-btns">
+      <a href="#" class="final-btn line-cta-js"><img src="./assets/sns_line.png" alt="line">LINEで物件を受け取る</a>
+      <a href="tel:0423135916" class="final-btn-tel">☎ 042-313-5916</a>
+    </div>
+    <p class="final-note">営業時間 10:00–18:00／定休日 水曜</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="logo-w">
+        <p class="info">想いを受け継ぎ、未来へつなぐ住まい探し。<br>小平市の不動産は、健匠不動産へ。</p>
+      </div>
+      <div>
+        <h4>会社情報</h4>
+        <p class="info">東京都小平市学園西町1-20-18 第2中村ビル5F<br>TEL 042-313-5916 ／ FAX 042-313-5917<br>営業 10:00–18:00（水曜定休）<br>東京都知事(1)第111638号</p>
+      </div>
+    </div>
+    <div class="copy">© 株式会社健匠不動産　／　<span class="admin-link" id="adminToggle">管理</span></div>
+  </div>
+</footer>
+
+<button class="fab" id="fab">＋ 物件を追加</button>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <h3>販売図面を掲載</h3>
+    <p class="desc">画像（図面・外観写真）をアップロードして公開・会員限定を選ぶだけ。下に即反映されます。</p>
+    <div class="field"><label>物件名</label><input type="text" id="mName" placeholder="小平市上水新町2丁目【新築】"></div>
+    <div class="row">
+      <div class="field"><label>価格（万円）</label><input type="text" id="mPrice" placeholder="4,980"></div>
+      <div class="field"><label>所在地</label><input type="text" id="mLoc" placeholder="東京都小平市上水新町2丁目"></div>
+    </div>
+    <div class="row">
+      <div class="field"><label>間取り</label><input type="text" id="mLayout" placeholder="4LDK"></div>
+      <div class="field"><label>面積</label><input type="text" id="mArea" placeholder="土地110.21㎡"></div>
+    </div>
+    <div class="field"><label>公開設定</label><select id="mVis"><option value="public">公開（誰でも閲覧）</option><option value="member">未公開（会員限定・LINE登録者のみ）</option></select></div>
+    <div class="field"><label>販売図面・写真</label><div class="drop" id="drop">クリックして画像を選択<br><small>JPG / PNG</small></div><input type="file" id="mFile" accept="image/*" style="display:none"><img class="preview" id="preview"></div>
+    <div class="actions"><button class="cancel" id="cancelBtn">キャンセル</button><button class="save" id="saveBtn">掲載する</button></div>
+  </div>
+</div>
+
+<script>
+const LINE_URL = "#"; // ★LINE友だち追加URL（例: https://lin.ee/xxxxx）
+const MYPAGE_URL  = "#"; // ★Facilo オリジナル家探しマイページのURL
+const PRESCREEN_URL = "#"; // ★いえーる ダンドリ オンライン事前審査のURL
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/16Ks5On9f_yVGqDBXQCuGswsWH0Qs0EBKgMoolocTbqE/export?format=csv&gid=0"; // ★物件一覧スプレッドシート
+
+// ===== スプレッドシートから物件データを取得 =====
+function parseCSV(text){
+  const rows=[]; let row=[], field='', inQuotes=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(inQuotes){
+      if(c==='"'){ if(text[i+1]==='"'){ field+='"'; i++; } else inQuotes=false; }
+      else field+=c;
+    } else {
+      if(c==='"') inQuotes=true;
+      else if(c===','){ row.push(field); field=''; }
+      else if(c==='\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+      else if(c==='\r'){ /* skip */ }
+      else field+=c;
+    }
+  }
+  if(field.length||row.length){ row.push(field); rows.push(row); }
+  return rows;
+}
+function yenToMan(str){
+  const n=parseFloat(String(str||'').replace(/[^0-9.]/g,''));
+  return n ? Math.round(n/10000).toLocaleString('ja-JP') : '';
+}
+async function fetchSheetProps(){
+  const res = await fetch(SHEET_CSV_URL);
+  if(!res.ok) throw new Error('sheet fetch failed: '+res.status);
+  const rows = parseCSV(await res.text()).filter(r=>r.length>1);
+  const header = (rows[0]||[]).map(h=>h.trim());
+  const idx = name => header.indexOf(name);
+  const iNo=idx('No.'), iName=idx('タイトル'), iLoc=idx('住所'), iImg=idx('画像URL'), iVis=idx('公開/未公開'), iLayout=idx('間取り'), iArea=idx('土地面積'), iPrice=idx('金額');
+  const items=[];
+  for(let r=1;r<rows.length;r++){
+    const row=rows[r];
+    const name=(row[iName]||'').trim();
+    if(!name) continue;
+    const area=(row[iArea]||'').trim();
+    const img=(row[iImg]||'').trim();
+    items.push({
+      id: 'sheet-'+((row[iNo]||'').trim()||r),
+      name,
+      loc: (row[iLoc]||'').trim(),
+      img: img || null,
+      vis: (row[iVis]||'').trim()==='未公開' ? 'member' : 'public',
+      layout: (row[iLayout]||'').trim(),
+      area: area ? `土地${area}㎡` : '',
+      price: yenToMan(row[iPrice]),
+      isNew: false
+    });
+  }
+  return items;
+}
+const ceoSrc = document.getElementById('ceoPhotoSrc'); if(ceoSrc){ const heroImg=document.getElementById('heroCeoImg'); if(heroImg) heroImg.src = ceoSrc.src; }
+document.getElementById('lineLink').href = LINE_URL;
+var _l2=document.getElementById('lineLink2'); if(_l2) _l2.href=LINE_URL;
+document.querySelectorAll('.line-cta-js').forEach(a=>{ a.href=LINE_URL; });
+document.querySelectorAll('[data-link="mypage"]').forEach(a=>a.href=MYPAGE_URL);
+document.querySelectorAll('[data-link="prescreen"]').forEach(a=>a.href=PRESCREEN_URL);
+
+// ===== 月々支払いシミュレーション =====
+function getSim(){
+  let age=parseInt(document.getElementById('simAge').value);
+  let down=parseFloat(document.getElementById('simDown').value);
+  if(isNaN(age)) age=40; if(isNaN(down)) down=0;
+  return {age,down};
+}
+function priceToMan(str){ const n=parseFloat(String(str).replace(/[^0-9.]/g,'')); return isNaN(n)?0:n; }
+function calcMonthly(priceMan){
+  const {age,down}=getSim();
+  const years=Math.min(79-age,50);
+  if(years<=0) return null;
+  const loan=priceMan*1.1-down; // 万円
+  if(loan<=0) return {yen:0,years,loan:0};
+  const r=0.012/12, n=years*12, P=loan*10000;
+  const m=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  return {yen:Math.round(m),years,loan:Math.round(loan)};
+}
+function payHtml(priceMan){
+  const res=calcMonthly(priceMan);
+  if(!res) return `<div class="pay"><span class="lbl">毎月の支払い目安</span><span class="yen" style="font-size:.95rem">年齢をご確認ください</span></div>`;
+  if(res.loan<=0) return `<div class="pay"><span class="lbl">毎月の支払い目安</span><span class="yen">頭金で購入可</span></div>`;
+  return `<div class="pay"><span class="lbl">毎月の支払い目安</span><span class="yen">${res.yen.toLocaleString()}</span><span class="u">円/月</span><span class="cond">借入${res.loan.toLocaleString()}万円・${res.years}年・金利1.2%で試算</span></div>`;
+}
+
+const hasStore = typeof window !== 'undefined' && window.storage;
+let memCache = [];
+async function loadProps(){
+  if(hasStore){
+    try{
+      const res = await window.storage.list('prop:'); const keys=(res&&res.keys)||[]; const items=[];
+      for(const k of keys){ try{ const r=await window.storage.get(k); if(r) items.push(JSON.parse(r.value)); }catch(e){} }
+      return items;
+    }catch(e){ return memCache.slice(); }
+  }
+  return memCache.slice();
+}
+async function saveProp(p){ if(hasStore){ try{ await window.storage.set('prop:'+p.id, JSON.stringify(p), false); return; }catch(e){} } memCache.push(p); }
+async function delProp(id){ if(hasStore){ try{ await window.storage.delete('prop:'+id, false); return; }catch(e){} } memCache=memCache.filter(p=>p.id!==id); }
+
+const SEED=[
+  {id:'s1',name:'小平市上水新町2丁目【新築】',price:'4,980',loc:'東京都小平市上水新町2丁目',layout:'4LDK',area:'土地110.21㎡',vis:'public',isNew:true,img:null},
+  {id:'s2',name:'小平市小川町1丁目【新築】',price:'5,480',loc:'東京都小平市小川町1丁目',layout:'4LDK',area:'土地145.71㎡',vis:'public',isNew:true,img:null},
+  {id:'s3',name:'小平市花小金井3丁目【新築】',price:'5,180',loc:'東京都小平市花小金井3丁目',layout:'4LDK',area:'土地125.10㎡',vis:'public',isNew:false,img:null},
+  {id:'s4',name:'【未公開】小平市栄町2丁目',price:'4,680',loc:'東京都小平市栄町2丁目',layout:'4LDK',area:'土地120.10㎡',vis:'member',isNew:true,img:null},
+  {id:'s5',name:'【未公開】小平市大沼町4丁目',price:'3,580',loc:'東京都小平市大沼町4丁目',layout:'3LDK',area:'建物108.48㎡',vis:'member',isNew:false,img:null},
+];
+let props=[],isMember=false,curFilter='all';
+async function init(){
+  const grid=document.getElementById('propGrid');
+  grid.innerHTML='<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:2rem 0;">物件情報を読み込み中...</p>';
+  let sheetProps=[];
+  try{ sheetProps = await fetchSheetProps(); }catch(e){ console.warn('物件シートの取得に失敗しました。フォールバックデータを表示します。', e); }
+  const localProps=await loadProps();
+  props=(sheetProps.length?sheetProps:SEED.slice()).concat(localProps);
+  render();
+}
+function updateCounts(){
+  const pub=props.filter(p=>p.vis==='public').length;
+  const mem=props.filter(p=>p.vis==='member').length;
+  animateCount('cntPublic',pub);
+  animateCount('cntMember',mem);
+  animateCount('cntTotal',pub+mem);
+  animateCount('mpCount',mem);
+}
+function animateCount(id,target){
+  const el=document.getElementById(id); if(!el) return;
+  const cur=parseInt(el.textContent)||0;
+  if(cur===target){ el.textContent=target; return; }
+  const steps=14; let i=0;
+  const inc=(target-cur)/steps;
+  clearInterval(el._t);
+  el._t=setInterval(()=>{ i++; el.textContent=Math.round(cur+inc*i); if(i>=steps){ el.textContent=target; clearInterval(el._t); } },28);
+}
+function render(){
+  const grid=document.getElementById('propGrid');
+  const sorted=props.slice().sort((a,b)=>(b.isNew?1:0)-(a.isNew?1:0));
+  const list=sorted.filter(p=> curFilter==='public'?p.vis==='public': curFilter==='member'?p.vis==='member':true);
+  grid.innerHTML=list.map(p=>{
+    const locked=p.vis==='member'&&!isMember;
+    const thumb=p.img?`<img src="${p.img}" alt="">`:`<div class="ph">🏠<span>間取り図</span></div>`;
+    const tag=p.vis==='member'?`<div class="tag">未公開</div>`:(p.isNew?`<div class="tag new">NEW</div>`:'');
+    const overlay=locked?`<div class="lock-ov"><div class="ico">🔒</div><b>未公開（会員限定）物件</b><p>LINE登録で<br>この物件を閲覧できます</p><span class="mini" data-line="1">LINE登録で解錠</span></div>`:'';
+    const detail=locked?`<div class="body"><h3>${p.name}</h3><div class="loc">📍 詳細は会員登録後にご覧いただけます</div></div>`
+      :`<div class="body"><h3>${p.name}</h3><div class="price">${p.price}<small>万円</small></div><div class="loc">📍 ${p.loc||''}</div><div class="specs"><span>🛏 ${p.layout||'-'}</span><span>📐 ${p.area||'-'}</span></div>${payHtml(priceToMan(p.price))}<div class="card-acts"><a href="${LINE_URL}" target="_blank" rel="noopener" class="ca ca-view">詳細を見る</a></div></div>`;
+    return `<div class="card ${locked?'locked':''}"><button class="del" data-id="${p.id}">✕</button><div class="thumb">${thumb}${tag}${overlay}</div>${detail}</div>`;
+  }).join('');
+  grid.querySelectorAll('.del').forEach(b=>{ b.onclick=async e=>{ e.stopPropagation(); const id=b.dataset.id; await delProp(id); props=props.filter(p=>p.id!==id); render(); }; });
+  grid.querySelectorAll('.lock-ov .mini').forEach(el=>{ el.onclick=()=>{ location.href=LINE_URL; }; });
+  updateCounts();
+}
+document.querySelectorAll('.filters button').forEach(b=>{ b.onclick=()=>{ document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active')); b.classList.add('active'); curFilter=b.dataset.f; render(); }; });
+const ms=document.getElementById('memberSwitch'); ms.onclick=()=>{ isMember=!isMember; ms.classList.toggle('on',isMember); render(); };
+function syncDownSlider(){
+  const s=document.getElementById('simDown'); if(!s) return;
+  const v=parseFloat(s.value)||0;
+  const pct=(v-s.min)/(s.max-s.min)*100;
+  s.style.setProperty('--fill',pct+'%');
+  const lbl=document.getElementById('simDownVal'); if(lbl) lbl.textContent=v.toLocaleString();
+}
+['simAge','simDown'].forEach(id=>{ const el=document.getElementById(id); el.addEventListener('input',()=>{ syncDownSlider(); render(); }); });
+document.getElementById('simReset').onclick=()=>{ document.getElementById('simAge').value=40; document.getElementById('simDown').value=0; syncDownSlider(); render(); };
+syncDownSlider();
+
+document.getElementById('adminToggle').onclick=()=>{ const on=document.body.classList.toggle('admin'); document.getElementById('adminToggle').textContent=on?'管理モードを終了':'管理'; };
+const modal=document.getElementById('modalBg');
+document.getElementById('fab').onclick=()=>modal.classList.add('show');
+function closeModal(){ modal.classList.remove('show'); resetForm(); }
+document.getElementById('cancelBtn').onclick=closeModal;
+modal.onclick=e=>{ if(e.target===modal) closeModal(); };
+const drop=document.getElementById('drop'),fileInput=document.getElementById('mFile'),preview=document.getElementById('preview');
+let imgData=null;
+drop.onclick=()=>fileInput.click();
+fileInput.onchange=()=>{ const f=fileInput.files[0]; if(!f) return; const reader=new FileReader();
+  reader.onload=e=>{ const img=new Image(); img.onload=()=>{ const max=1000; let {width,height}=img; if(width>max){ height=height*max/width; width=max; } const c=document.createElement('canvas'); c.width=width; c.height=height; c.getContext('2d').drawImage(img,0,0,width,height); imgData=c.toDataURL('image/jpeg',0.72); preview.src=imgData; preview.style.display='block'; drop.classList.add('has'); drop.innerHTML='✓ 画像を読み込みました（変更はクリック）'; }; img.src=e.target.result; }; reader.readAsDataURL(f); };
+function resetForm(){ ['mName','mPrice','mLoc','mLayout','mArea'].forEach(id=>document.getElementById(id).value=''); document.getElementById('mVis').value='public'; imgData=null; preview.style.display='none'; drop.classList.remove('has'); drop.innerHTML='クリックして画像を選択<br><small>JPG / PNG</small>'; }
+document.getElementById('saveBtn').onclick=async()=>{ const name=document.getElementById('mName').value.trim(); if(!name){ alert('物件名を入力してください'); return; }
+  const p={id:'u'+Date.now(),name,price:document.getElementById('mPrice').value.trim()||'応相談',loc:document.getElementById('mLoc').value.trim(),layout:document.getElementById('mLayout').value.trim(),area:document.getElementById('mArea').value.trim(),vis:document.getElementById('mVis').value,isNew:true,img:imgData};
+  try{ await saveProp(p); }catch(e){ alert('保存容量を超えた可能性があります。画像サイズを小さくしてください。'); }
+  props=props.concat([p]); render(); closeModal(); };
+
+const io=new IntersectionObserver(es=>{ es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); },{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const REVIEWS = [
+  {name:"Kakeru Satomura", initial:"K", color:"#7c4dff", stars:5, when:"3か月前", text:"先日はありがとうございました。穂本さんのご対応が素晴らしく、いい物件を見つけることが出来ました！"},
+  {name:"kei komagata", initial:"k", color:"#9c27b0", stars:5, when:"3日前", text:"最初はとりあえず内見だけと思っていましたが、穂本さんにお会いしてこちらでお世話になろうと決めました。物件はもちろんですが、最終的には穂本さんの人柄で購入を決めました。ありがとうございました。"},
+  {name:"小野晃季", initial:"晃", color:"#5e35b1", stars:5, when:"2週間前", text:"初めての物件探しで不安でしたが、とても丁寧に対応していただきました。希望条件を細かく聞いてくださり、無理に契約を勧めることもなく安心して相談できました。返信も早く、最後まで親身に対応していただけたので感謝しています。"},
+  {name:"Su Sandi Lin", initial:"S", color:"#7c4dff", stars:5, when:"1週間前", text:"人生で初めての住宅購入で不安だらけでしたが、最後までとても丁寧に対応していただき安心して契約できました。物件のメリットだけでなく注意点もしっかり説明してくれたので信頼できました。これから家探しをする方にもおすすめできる不動産会社さんです。"},
+  {name:"ま", initial:"ま", color:"#ff8a65", stars:5, when:"3か月前", text:"担当の穂本さんの対応がとても良くて、いい物件に出逢えました^ ^"},
+  {name:"けー", initial:"け", color:"#8d6e63", stars:5, when:"3か月前", text:"雰囲気がすごく素敵でいい物件に出会えました！ありがとうございます！"},
+  {name:"塩飽直人", initial:"直", color:"#ff7043", stars:5, when:"1週間前", text:"子供が産まれた事を機に家探していましたが、穂本さんの迅速且つ丁寧な対応で直ぐに家も決まり助かりました。そして、オプションも一貫しており、その後も楽で助かりました。有難う御座いました！"},
+  {name:"塩飽リサ", initial:"リ", color:"#26a69a", stars:5, when:"1週間前", text:"担当していただいた方も子持ちだったので、お話ししやすかったです！子育て世代の住みやすいエリアなどもご案内いただきました！オプションまで込みでご対応いただき、とても分かりやすくて助かりました！"},
+  {name:"武山リサ", initial:"リ", color:"#26a69a", stars:5, when:"1週間前", text:"とても雰囲気が良く、親身になってお話しして頂きました！小平市で家を探していたので、小平市の魅力や交通の便など、住んだことを想像しやすかったです！スムーズにやり取りできました、ありがとうございました。"},
+  {name:"にーちにーち", initial:"に", color:"#ff7043", stars:5, when:"1週間前", text:"何事もなくスムーズにお取引させていただきました。息子ともお話ししていただいてありがとうございます。"},
+  {name:"明日香", initial:"明", color:"#5c6bc0", stars:5, when:"1週間前", text:"とてもスムーズに迅速に対応して頂いて大変良かったです。"},
+  {name:"NA SAKA", initial:"N", color:"#78909c", stars:5, when:"3週間前", text:"希望条件に沿った提案を色々していただけたのと、内見など子どもも一緒でしたが時間を調整いただき大変助かりました。"},
+  {name:"Masashi Kobayashi", initial:"M", color:"#ffb300", stars:5, when:"3週間前", text:"一戸建ての購入でお世話になりました。希望するエリアや条件を伝えたところ、的確な物件を複数ご提案頂き、とても頼もしかったです。担当の方がこちらの要望をしっかり汲み取ってくれ、理想にぴったりの物件に出会うことができました。質問への返答も早く、不安なことがあってもすぐに解消できたので安心してお任せできました。"},
+  {name:"Narikawa Shiori", initial:"N", color:"#90a4ae", stars:5, when:"3か月前", text:"土地取引のみではありましたが、丁寧でスムーズにご対応いただきありがとうございました！"},
+  {name:"のだっち", initial:"の", color:"#29b6f6", stars:5, when:"3か月前", text:"引き渡しもスムーズにできてよかったです"},
+  {name:"ゆき屋", initial:"ゆ", color:"#5e6fd8", stars:5, when:"4か月前", text:"マイホーム用の土地を穂本さんに仲介して頂き購入しました。穂本さんはご提案が理論的で的確なのと、しつこいセールスも無く、非常に気持ち良く物件探しに集中する事が出来ました。条件に合う物件が無くなり中断した際も、無理に条件が合ってない物件の提案などはせず待って頂いたのも助かりました。スーモ経由で数え切れない程の不動産屋さんとやり取りをしましたが、最終的には穂本さんのところで買いたいと思い仲介をお願いしました。"},
+  {name:"saito", initial:"S", color:"#26a69a", stars:5, when:"4か月前", text:"今回戸建て用土地購入でお世話になりました。不明点や懸念点に対し、親切に詳しく対応してくださり、非常に心強かったです。そして、しつこい営業連絡がなく、必要な情報を必要なタイミングだけでいただけるのが信頼できました。同じく家探しを始める友人がでてきたら紹介したいと思いました。改めて今回はありがとうございました！"},
+  {name:"小檜山美紅", initial:"美", color:"#26a69a", stars:5, when:"4か月前", text:"一戸建て購入で大変お世話になりました！地元の先輩ですがとってもいい人で優しさが滲み出てる人です。こちらの希望通りに色々動いてくれたおかげで住みたい！と思った家を購入できてとっても感謝してます。家族みんなで遊び来てください。"},
+  {name:"ayu", initial:"a", color:"#ab47bc", stars:5, when:"5か月前", text:"小平市で土地を探しており、健匠不動産さんにお世話になりました。建築条件付きの土地でしたが、間取りをはじめ外壁・キッチン・お風呂・洗面台等、各種オプション仕様について、こちらの希望を細かく聞いてくださり、ほぼ注文住宅のような形で柔軟に対応していただけたので、とても満足しています。売ること優先ではなく、納得して購入できるように寄り添って対応してくれる地元密着の不動産屋さんだと思います。小平エリアで土地や家をご検討されている方には、ぜひおすすめしたいです。"},
+  {name:"染谷寛子", initial:"寛", color:"#7c4dff", stars:5, when:"5か月前", text:"最後まで、一生懸命取り組んで下さいました。遠いところ何回も足を運んでいただき、嬉しく思っています。これからもご活躍願っております。"}
+];
+
+
+// ===== レビュー描画 =====
+function renderReviews(){
+  const g=document.getElementById('rvGrid'); if(!g) return;
+  g.innerHTML=REVIEWS.map(r=>{
+    const stars='★'.repeat(r.stars);
+    return `<div class="rv-card"><div class="rv-head"><div class="rv-ava" style="background:${r.color}">${r.initial}</div><div class="rv-meta"><b>${r.name}</b><span class="rv-when">${r.when}</span></div></div><div class="rv-st">${stars}</div><p>${r.text}</p><span class="rv-g"><span class="gg">G</span> Googleクチコミ</span></div>`;
+  }).join('');
+  const c=document.getElementById('rvCount'); if(c) c.textContent=REVIEWS.length;
+  const avg=(REVIEWS.reduce((s,r)=>s+r.stars,0)/REVIEWS.length).toFixed(1);
+  const a=document.getElementById('rvAvg'); if(a) a.textContent=avg;
+}
+renderReviews();
+
+// ===== 口コミ横スライダー =====
+(function(){
+  const g=document.getElementById('rvGrid'); if(!g) return;
+  const step=358; // card width + gap
+  const prev=document.getElementById('rvPrev'), next=document.getElementById('rvNext');
+  if(prev) prev.onclick=()=>g.scrollBy({left:-step,behavior:'smooth'});
+  if(next) next.onclick=()=>g.scrollBy({left:step,behavior:'smooth'});
+  // drag to scroll
+  let down=false,sx=0,sl=0,moved=false;
+  g.addEventListener('mousedown',e=>{down=true;moved=false;g.classList.add('grabbing');sx=e.pageX;sl=g.scrollLeft;});
+  window.addEventListener('mouseup',()=>{down=false;g.classList.remove('grabbing');});
+  g.addEventListener('mouseleave',()=>{down=false;g.classList.remove('grabbing');});
+  g.addEventListener('mousemove',e=>{if(!down)return;e.preventDefault();const dx=e.pageX-sx;if(Math.abs(dx)>4)moved=true;g.scrollLeft=sl-dx;});
+  g.addEventListener('click',e=>{if(moved)e.preventDefault();},true);
+  // auto scroll
+  let timer=setInterval(auto,3500);
+  function auto(){
+    if(g.scrollLeft+g.clientWidth>=g.scrollWidth-4){ g.scrollTo({left:0,behavior:'smooth'}); }
+    else { g.scrollBy({left:step,behavior:'smooth'}); }
+  }
+  ['mouseenter','touchstart','mousedown'].forEach(ev=>g.addEventListener(ev,()=>{clearInterval(timer);}));
+  ['mouseleave','touchend'].forEach(ev=>g.addEventListener(ev,()=>{clearInterval(timer);timer=setInterval(auto,3500);}));
+})();
+
+// ===== FAQ スムーズ開閉 =====
+document.querySelectorAll('.faq-item').forEach(details=>{
+  const summary=details.querySelector('summary');
+  const content=details.querySelector('.faq-a');
+  let anim=null, isClosing=false, isExpanding=false;
+  summary.addEventListener('click', e=>{
+    e.preventDefault();
+    details.style.overflow='hidden';
+    if(isClosing || !details.open){ openItem(); }
+    else if(isExpanding || details.open){ shrink(); }
+  });
+  function shrink(){
+    isClosing=true;
+    const startH=`${details.offsetHeight}px`, endH=`${summary.offsetHeight}px`;
+    if(anim) anim.cancel();
+    anim=details.animate({height:[startH,endH]},{duration:250,easing:'ease-out'});
+    anim.onfinish=()=>onFinish(false);
+    anim.oncancel=()=>{isClosing=false;};
+  }
+  function openItem(){
+    details.style.height=`${details.offsetHeight}px`;
+    details.open=true;
+    requestAnimationFrame(()=>expand());
+  }
+  function expand(){
+    isExpanding=true;
+    const startH=`${details.offsetHeight}px`, endH=`${summary.offsetHeight+content.offsetHeight}px`;
+    if(anim) anim.cancel();
+    anim=details.animate({height:[startH,endH]},{duration:250,easing:'ease-out'});
+    anim.onfinish=()=>onFinish(true);
+    anim.oncancel=()=>{isExpanding=false;};
+  }
+  function onFinish(open){
+    details.open=open;
+    anim=null; isClosing=false; isExpanding=false;
+    details.style.height=details.style.overflow='';
+  }
+});
+
+init();
+</script>
+</body>
+</html>
