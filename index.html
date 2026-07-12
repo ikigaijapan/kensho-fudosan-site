@@ -480,6 +480,12 @@ function parseCSV(text){
   if(field.length||row.length){ row.push(field); rows.push(row); }
   return rows;
 }
+function resolveImgUrl(url){
+  if(!url) return url;
+  const m = url.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?id=|thumbnail\?id=)([a-zA-Z0-9_-]+)/);
+  if(m) return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w1000`;
+  return url;
+}
 function yenToMan(str){
   const n=parseFloat(String(str||'').replace(/[^0-9.]/g,''));
   return n ? Math.round(n/10000).toLocaleString('ja-JP') : '';
@@ -503,7 +509,7 @@ async function fetchSheetProps(){
       id: 'sheet-'+((row[iNo]||'').trim()||r),
       name,
       loc: (row[iLoc]||'').trim(),
-      img: img || null,
+      img: img ? resolveImgUrl(img) : null,
       vis: (row[iVis]||'').trim()==='未公開' ? 'member' : 'public',
       layout: (row[iLayout]||'').trim(),
       area: area ? `土地${area}㎡` : '',
