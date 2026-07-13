@@ -2,7 +2,7 @@
 
 小平市・近隣7市の不動産購入層をターゲットにした、LINE登録誘導型のランディングページです。
 
-**公開URL**: https://tanitanistudio.github.io/kensho-fudosan-lp/
+**公開URL**: https://ikigaijapan.github.io/kensho-fudosan-site/
 
 ## 構成
 
